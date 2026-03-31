@@ -1,6 +1,6 @@
 import React from "react";
 import { toast } from "react-toastify";
-import ErrorImg from "../../assets/error.png"
+import ErrorImg from "../../assets/empty.jpg"
 
 const Cart = ({ cart, setcart }) => {
   //   console.log(cart);
@@ -25,12 +25,17 @@ const Cart = ({ cart, setcart }) => {
 
   return (
     <div className="w-[80%] mx-auto">
-      <h1 className="text-3xl font-bold text-black my-6">Your Cart </h1>
       {cart.length === 0 ? (
-        
-        <p className="text-3xl font-bold py-10 text-center">Your Card is Empty!!</p>
-      ) : (
-        <>
+            <>
+            <div className="space-y-3 my-10">
+                <img className='flex justify-center mx-auto w-80 rounded-3xl' src={ErrorImg} alt="" />
+          <p className="text-3xl font-bold text-center">Your Card is Empty!!</p>
+
+            </div>
+            </>
+        ) : (
+            <>
+            <h1 className="text-3xl font-bold text-black my-6">Your Cart </h1>
           <div className="space-y-5 mb-10">
             {cart.map((item) => (
               <div
