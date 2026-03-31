@@ -4,26 +4,38 @@ const Footer = () => {
   return (
     <div className="">
       <footer className=" bg-[#101727]">
-        <div className="max-w-[80%] mx-auto footer sm:footer-horizontal text-base-content p-10">
+        <div className="max-w-[80%] mx-auto footer sm:footer-horizontal text-base-content p-10 py-15">
             <nav className="text-white">
             <h6 className="footer-title text-2xl text-white font-bold">Digitools</h6>
             <a className="link link-hover">Premium digital tools for creators, professionals,<br /> and businesses. Work smarter <br /> with our suite of powerful tools.</a>
             
           </nav>
+        
+
           <nav className="text-white">
-            <h6 className="footer-title text-white">Services</h6>
-            <a className="link link-hover text-white">Branding</a>
-            <a className="link link-hover text-white">Design</a>
-            <a className="link link-hover text-white">Marketing</a>
-            <a className="link link-hover text-white">Advertisement</a>
+            <h6 className="footer-title">Product</h6>
+            <a className="link link-hover">Features</a>
+            <a className="link link-hover">Pricing</a>
+            <a className="link link-hover">Templates</a>
+            <a className="link link-hover">Integrations</a>
           </nav>
+
           <nav className="text-white">
             <h6 className="footer-title">Company</h6>
-            <a className="link link-hover">About us</a>
-            <a className="link link-hover">Contact</a>
-            <a className="link link-hover">Jobs</a>
-            <a className="link link-hover">Press kit</a>
+            <a className="link link-hover">About</a>
+            <a className="link link-hover">Blog</a>
+            <a className="link link-hover">Careers</a>
+            <a className="link link-hover">Press</a>
           </nav>
+
+          <nav className="text-white">
+            <h6 className="footer-title">Resources</h6>
+            <a className="link link-hover">Documentation</a>
+            <a className="link link-hover">Help Center</a>
+            <a className="link link-hover">Community</a>
+            <a className="link link-hover">Contact</a>
+          </nav>
+
           <nav className="text-white">
             <h6 className="footer-title">Social</h6>
             <div className="grid grid-flow-col gap-4">
@@ -62,10 +74,11 @@ const Footer = () => {
               </a>
             </div>
           </nav>
+
         </div>
-        <div className="max-w-[80%] mx-auto text-white flex items-center justify-between py-10 border-t-amber-50">
+        <div className="max-w-[80%] mx-auto border-t text-white flex items-center justify-between py-6">
             <h1>© 2026 Digitools. All rights reserved.</h1>
-            <p>Privacy Policy           Terms of Service           Cookies</p>
+            <p className="gap-5 flex "><span>Privacy Policy</span>  <span>Terms of Service </span> <span> Cookies</span></p>
         </div>
       </footer>
     </div>

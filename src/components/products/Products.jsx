@@ -1,8 +1,11 @@
 import React, { use } from "react";
 import Product from "./Product";
 
-const Products = ({ productsPromise }) => {
+const Products = ({ productsPromise, cart,setcart }) => {
   const products = use(productsPromise);
+
+ 
+  
 
   // console.log(products);
 
@@ -16,16 +19,13 @@ const Products = ({ productsPromise }) => {
           to boost your productivity and creativity.
         </p>
 
-        <div>
-          <button className="btn rounded-full bg-linear-to-r from-[#4F39F6] to-[#9514FA]">
-            Products
-          </button>
-          <button className="btn rounded-full">Cart (2)</button>
-        </div>
+       
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[80%] mx-auto">
-        {products.map((product) => <Product product={product} key={product.id}></Product> )}
+        {products.map((product) => (
+          <Product product={product} key={product.id} cart={cart} setcart={setcart}></Product>
+        ))}
       </div>
     </div>
   );

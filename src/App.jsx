@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import "./App.css";
 import GetStep from "./components/getStep/GetStep";
 import Banner from "./components/hero/Banner/Banner";
@@ -8,6 +8,8 @@ import Footer from "./components/pricing/Footer";
 import Pricing from "./components/pricing/Pricing";
 import Ready from "./components/pricing/Ready";
 import Products from "./components/products/Products";
+import Cart from "./components/products/Cart";
+import { ToastContainer } from "react-toastify";
 
 //APi call
 
@@ -20,20 +22,48 @@ const productsPromise = getProducts();
 console.log(productsPromise);
 
 function App() {
+  const [activetab, setActiveTab] = useState("Products");
+  const [cart, setcart] = useState([]);
+  // console.log(cart);
+  
+  // console.log(activetab);
   return (
     <>
-      <Navbar />
+      <Navbar cart={cart} />
       <Banner />
       <Updated />
+
+      <div className="tabs tabs-box bg-transparent justify-center mt-10">
+        <input
+          type="radio"
+          name="my_tabs_1"
+          className={`tab rounded-full w-40 ${activetab === "Products" ? 'bg-linear-to-r from-[#4F39F6] to-[#9514FA]':''}`}
+          defaultChecked
+          aria-label="Products"
+          onClick={() => setActiveTab("Products")}
+          />
+        <input
+          type="radio"
+          name="my_tabs_1"
+           className={`tab rounded-full w-40 ${activetab === "Cart" ? 'bg-linear-to-r from-[#4F39F6] to-[#9514FA]':''}`}
+          aria-label={`Cart (${cart.length})`}
+          onClick={() => setActiveTab("Add to Cart")}
+        />
+      </div>
       <Suspense
         fallback={<span className="loading loading-bars loading-xl"></span>}
       >
-        <Products productsPromise={productsPromise}/>
+        {activetab === "Products" ? (
+          <Products productsPromise={productsPromise} cart={cart} setcart={setcart} />
+        ) : null}
       </Suspense>
+      {activetab === "Add to Cart" ? <Cart cart={cart} setcart={setcart}/> : null}
       <GetStep />
       <Pricing />
       <Ready />
       <Footer />
+
+      <ToastContainer/>
     </>
   );
 }
