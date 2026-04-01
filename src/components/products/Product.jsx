@@ -46,7 +46,7 @@ const Product = ({ product, cart, setcart }) => {
           <div className="">
             <button
               onClick={handleBoyNow}
-              className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full w-full text-white"
+              className={`btn ${isBuyNow ? "bg-pink-400 text-black" :"bg-linear-to-r from-[#4F39F6] to-[#9514FA]"}  rounded-full w-full text-white`}
             >
               {isBuyNow ? "Add to Cart" : "Boy Now"}
             </button>

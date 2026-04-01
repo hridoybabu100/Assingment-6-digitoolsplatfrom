@@ -14,7 +14,7 @@ import { ToastContainer } from "react-toastify";
 //APi call
 
 const getProducts = async () => {
-  const res = await fetch("/public/data.json");
+  const res = await fetch("/data.json");
   return res.json();
 };
 
