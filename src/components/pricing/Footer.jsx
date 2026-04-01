@@ -46,22 +46,29 @@ const Footer = () => {
             <h1 className="text-white font-bold text-2xl pb-2">Social Media</h1>
             <div className="flex gap-3 text-center items-center justify-center lg:justify-normal">
               <ul className="bg-white w-10 h-10 rounded-full flex justify-center items-center">
-                <li className="text-black"><FaFacebook/></li>
+                <li className="text-black">
+                  <FaFacebook />
+                </li>
               </ul>
               <ul className="bg-white w-10 h-10 rounded-full flex justify-center items-center">
-                <li className="text-black"><LuInstagram/></li>
+                <li className="text-black">
+                  <LuInstagram />
+                </li>
               </ul>
               <ul className="bg-white w-10 h-10 rounded-full flex justify-center items-center">
-                <li className="text-black"><FaTwitter/></li>
+                <li className="text-black">
+                  <FaTwitter />
+                </li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div className=" border-t text-white flex items-center justify-between py-6 ">
+        <div className=" border-t text-white flex sm:flex-row flex-col text-center items-center justify-between py-6 ">
           <h1 className="">© 2026 Digitools. All rights reserved.</h1>
           <div className="lg:flex items-center gap-5 text-white hidden">
-           <span> Privacy Policy </span>          <span>Terms of Service  </span>         <span>Cookies</span>
+            <span> Privacy Policy </span> <span>Terms of Service </span>{" "}
+            <span>Cookies</span>
           </div>
         </div>
       </footer>

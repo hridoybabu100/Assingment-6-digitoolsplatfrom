@@ -1,6 +1,7 @@
 import React from "react";
 import HeroImg from "../../../assets/banner.png";
 import BadgeImg from "../../../assets/Group 5.png";
+import { CiPlay1 } from "react-icons/ci";
 
 const Banner = () => {
   return (
@@ -26,7 +27,7 @@ const Banner = () => {
               <button className="btn btn-primary rounded-full">
                 Get Started
               </button>
-              <button className="btn outline rounded-full">Get Started</button>
+              <button className="btn outline rounded-full"><CiPlay1 /> Get Started</button>
             </div>
           </div>
 

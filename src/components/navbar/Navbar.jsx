@@ -4,7 +4,7 @@ import { CiShoppingCart } from "react-icons/ci";
 const Navbar = ({ cart }) => {
   return (
    <div className="shadow">
-     <div className="py-10 shadow-b flex justify-between items-center max-w-[96%] lg:max-w-[80%] mx-auto ">
+     <div className="py-6 shadow-b flex justify-between items-center max-w-[96%] lg:max-w-[80%] mx-auto ">
       <div className="">
         <h1 class="text-4xl font-bold bg-linear-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
           DigiTools

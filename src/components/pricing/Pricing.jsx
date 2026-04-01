@@ -5,7 +5,7 @@ const Pricing = () => {
   return (
     <div className=" max-w-[96%] lg:max-w-[80%] mx-auto">
       <div className="text-center pt-10 pb-8">
-        <h1 className="text-[48px] text-[#101727] font-bold">
+        <h1 className="text-[48px] font-bold bg-linear-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
           Simple, Transparent Pricing
         </h1>
         <p>
