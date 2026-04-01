@@ -3,14 +3,15 @@ import { CiShoppingCart } from "react-icons/ci";
 
 const Navbar = ({ cart }) => {
   return (
-    <div className="py-10 shadow-b flex justify-between items-center max-w-[80%] mx-auto">
+   <div className="shadow">
+     <div className="py-10 shadow-b flex justify-between items-center max-w-[96%] lg:max-w-[80%] mx-auto ">
       <div className="">
         <h1 class="text-4xl font-bold bg-linear-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
           DigiTools
         </h1>
       </div>
 
-      <div className=" flex items-center gap-5">
+      <div className=" hidden lg:flex items-center gap-5 ">
         <ul>
           <li>
             <a href="#"></a>Products
@@ -34,7 +35,7 @@ const Navbar = ({ cart }) => {
       </div>
 
       <div className="flex items-center gap-5">
-        <p>FAQ</p>
+        <p className="hidden md:block">FAQ</p>
         <div>
           <button className="relative">
             <CiShoppingCart size={22} />
@@ -44,7 +45,7 @@ const Navbar = ({ cart }) => {
           </button>
         </div>
         <div>
-          <p>Login</p>
+          <p className="hidden md:block">Login</p>
         </div>
         <div>
           <button className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full text-[#FFFFFF] font-bold">
@@ -53,6 +54,7 @@ const Navbar = ({ cart }) => {
         </div>
       </div>
     </div>
+   </div>
   );
 };
 

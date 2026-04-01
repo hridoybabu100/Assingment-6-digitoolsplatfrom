@@ -3,7 +3,7 @@ import PricingImg from "../../assets/Vector.png"
 
 const Pricing = () => {
   return (
-    <div className="">
+    <div className=" max-w-[96%] lg:max-w-[80%] mx-auto">
       <div className="text-center pt-10 pb-8">
         <h1 className="text-[48px] text-[#101727] font-bold">
           Simple, Transparent Pricing
@@ -13,7 +13,7 @@ const Pricing = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-3 gap-6 max-w-[80%] mx-auto pb-15">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 pb-15">
 
         <div className="bg-[#F2F2F2] p-8 shadow-md space-y-2 rounded-xl">
           <h2 className="text-2xl font-bold ">Starter</h2>

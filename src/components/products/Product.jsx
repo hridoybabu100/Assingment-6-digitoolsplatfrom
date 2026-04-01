@@ -22,7 +22,7 @@ const Product = ({ product, cart, setcart }) => {
   };
   return (
     <div>
-      <div className="w-[80%] mx-auto my-10">
+      <div className="w-[96%] lg:w-[80%] mx-auto my-10">
         <div className="bg-[#F2F2F2] border-zinc-400 space-y-3 p-4 rounded-md">
           <div className="flex justify-between">
             <img src={product.img} alt="" />
@@ -48,7 +48,7 @@ const Product = ({ product, cart, setcart }) => {
               onClick={handleBoyNow}
               className={`btn ${isBuyNow ? "bg-pink-400 text-black" :"bg-linear-to-r from-[#4F39F6] to-[#9514FA]"}  rounded-full w-full text-white`}
             >
-              {isBuyNow ? "Add to Cart" : "Boy Now"}
+              {isBuyNow ? "Add to Cart" : "Buy Now"}
             </button>
           </div>
         </div>

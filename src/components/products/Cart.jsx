@@ -1,6 +1,6 @@
 import React from "react";
 import { toast } from "react-toastify";
-import ErrorImg from "../../assets/empty.jpg";
+import { CiShoppingCart } from "react-icons/ci";
 
 const Cart = ({ cart, setcart }) => {
   //   console.log(cart);
@@ -22,17 +22,15 @@ const Cart = ({ cart, setcart }) => {
   };
 
   return (
-    <div className="w-[80%] mx-auto">
+    <div className="lg:w-[80%] w-[96%] mx-auto">
       {cart.length === 0 ? (
         <>
-          <div className="space-y-3 my-10">
-            <img
-              className="flex justify-center mx-auto w-80 rounded-3xl"
-              src={ErrorImg}
-              alt=""
-            />
+          <div className="space-y-1 py-4 my-10 bg-zinc-200 rounded-2xl">
+            <div className="mx-auto">
+              <CiShoppingCart className="h-40 w-40 mx-auto"/>
+            </div>
             <p className="text-3xl font-bold text-center">
-              Your Card is Empty!!
+              Your card is empty!!
             </p>
           </div>
         </>
