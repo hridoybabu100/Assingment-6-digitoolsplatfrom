@@ -137,7 +137,10 @@ Create 6–10 product data with:
     - Name of your  Project
     - A little Description
     - Technology that you use
-    - 3 Features about your project. 
+    - 3 Features about your project.
+    1. Pricing features section.
+    2. Rating feature section.
+    3. Cart feature with api dynamiccaly data loaded.
  
 
 ---
