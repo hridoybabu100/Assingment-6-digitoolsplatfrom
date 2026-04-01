@@ -7,6 +7,7 @@ const Product = ({ product, cart, setcart }) => {
 
   const handleBoyNow = () => {
     setBoyNow(true);
+    
 
     const isFound = cart.find((item) => item.id === product.id);
     // console.log(isFound);
