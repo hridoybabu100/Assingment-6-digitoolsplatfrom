@@ -1,6 +1,6 @@
 import React from "react";
 import { toast } from "react-toastify";
-import ErrorImg from "../../assets/empty.jpg"
+import ErrorImg from "../../assets/empty.jpg";
 
 const Cart = ({ cart, setcart }) => {
   //   console.log(cart);
@@ -10,32 +10,35 @@ const Cart = ({ cart, setcart }) => {
 
   const handleCatrs = () => {
     setcart([]);
-    toast.success("Payment Successfull")
+    toast.success("Payment Successfull");
   };
 
   const handleDelete = (item) => {
     // console.log(item);
-    const filterArray = cart.filter(i => i.id !== item.id);
+    const filterArray = cart.filter((i) => i.id !== item.id);
     // console.log(filterArray);
     setcart(filterArray);
-    toast.success("Item Deleted!")
-    
-
-  }
+    toast.success("Item Deleted!");
+  };
 
   return (
     <div className="w-[80%] mx-auto">
       {cart.length === 0 ? (
-            <>
-            <div className="space-y-3 my-10">
-                <img className='flex justify-center mx-auto w-80 rounded-3xl' src={ErrorImg} alt="" />
-          <p className="text-3xl font-bold text-center">Your Card is Empty!!</p>
-
-            </div>
-            </>
-        ) : (
-            <>
-            <h1 className="text-3xl font-bold text-black my-6">Your Cart </h1>
+        <>
+          <div className="space-y-3 my-10">
+            <img
+              className="flex justify-center mx-auto w-80 rounded-3xl"
+              src={ErrorImg}
+              alt=""
+            />
+            <p className="text-3xl font-bold text-center">
+              Your Card is Empty!!
+            </p>
+          </div>
+        </>
+      ) : (
+        <>
+          <h1 className="text-3xl font-bold text-black my-6">Your Cart </h1>
           <div className="space-y-5 mb-10">
             {cart.map((item) => (
               <div
@@ -48,10 +51,13 @@ const Cart = ({ cart, setcart }) => {
                   </div>
                   <div>
                     <h1 className="text-2xl font-bold">{item.name}</h1>
-                    <h1>{item.price}</h1>
+                    <h1 className="font-bold pt-2">${item.price}</h1>
                   </div>
                 </div>
-                <button onClick={() => handleDelete(item)} className="btn text-red-600 rounded-full">
+                <button
+                  onClick={() => handleDelete(item)}
+                  className="btn text-red-600 rounded-full"
+                >
                   Delete
                 </button>
               </div>

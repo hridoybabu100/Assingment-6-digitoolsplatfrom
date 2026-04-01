@@ -33,11 +33,11 @@ function App() {
       <Banner />
       <Updated />
 
-      <div className="tabs tabs-box bg-transparent justify-center mt-10">
+      <div className="tabs tabs-box bg-transparent justify-center mt-10 py-7">
         <input
           type="radio"
           name="my_tabs_1"
-          className={`tab rounded-full w-40 ${activetab === "Products" ? 'bg-linear-to-r from-[#4F39F6] to-[#9514FA]':''}`}
+          className={`tab rounded-full w-40 ${activetab === "Products" ? 'text-white font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA]':''}`}
           defaultChecked
           aria-label="Products"
           onClick={() => setActiveTab("Products")}
@@ -45,19 +45,19 @@ function App() {
         <input
           type="radio"
           name="my_tabs_1"
-           className={`tab rounded-full w-40 ${activetab === "Cart" ? 'bg-linear-to-r from-[#4F39F6] to-[#9514FA]':''}`}
+           className={`tab rounded-full w-40 ${activetab === "Cart" ? 'text-white font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA]':''}`}
           aria-label={`Cart (${cart.length})`}
-          onClick={() => setActiveTab("Add to Cart")}
+          onClick={() => setActiveTab("Cart")}
         />
       </div>
       <Suspense
-        fallback={<span className="loading loading-bars loading-xl"></span>}
+        fallback={<span className="loading loading-bars loading-xl w-20"></span>}
       >
         {activetab === "Products" ? (
           <Products productsPromise={productsPromise} cart={cart} setcart={setcart} />
         ) : null}
       </Suspense>
-      {activetab === "Add to Cart" ? <Cart cart={cart} setcart={setcart}/> : null}
+      {activetab === "Cart" ? <Cart cart={cart} setcart={setcart}/> : null}
       <GetStep />
       <Pricing />
       <Ready />
